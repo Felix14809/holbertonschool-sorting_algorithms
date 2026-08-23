@@ -1,13 +1,13 @@
 #include "sort.h"
 /**
-*bubble_sort - sorts and array of ints using bubble sort algo
-*@array: the array of ints to sort
-*@size: size of the array
+*insertion_sort_list - sorts a list using insertion sort
+*@list: pointer to list
 */
 void insertion_sort_list(listint_t **list)
 {
 	listint_t *min, *temp, *index;
 	int sorted = 1;
+
 	if (*list == NULL)
 		return;
 	index = *list;
