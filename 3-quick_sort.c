@@ -1,6 +1,6 @@
 #include "sort.h"
 /**
- * partition - partition and sorts the partition for quicksort 
+ * partition - partition and sorts the partition for quicksort
  * @array: the array to partition
  * @size: size of the array
  * @left: index of the first element
@@ -30,7 +30,7 @@ int partition(int *array, size_t size, int left, int right)
 		current++;
 	}
 	low++;
-	if (low != right)
+	if (array[low] != pivot)
 	{
 		temp = array[low];
 		array[low] = array[current];
@@ -39,12 +39,11 @@ int partition(int *array, size_t size, int left, int right)
 	}
 	return (low);
 }
-
 /**
  * quick_sort_recursion - sorts a partition of an array
  * @array: the array to sort
  * @size: size of the array
- * @left: starting index 
+ * @left: starting index
  * @right: ending index
  */
 void quick_sort_recursion(int *array, size_t size, int left, int right)

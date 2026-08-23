@@ -20,7 +20,6 @@ void selection_sort(int *array, size_t size)
 		tempidx++;
 		while (tempidx < size)
 		{
-			
 			if (array[tempidx] < array[min])
 			{
 				min = tempidx;
